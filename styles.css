@@ -1,0 +1,79 @@
+body {
+    font-family: 'Merriweather', serif;
+    cursor: grab;
+}
+
+nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    background: #8D9B6A;
+    height: 2em;
+    text-align: center;
+}
+
+.nav-item {
+    list-style: none;
+    color: white;
+}
+
+ul {
+    align-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    padding: 1em;
+}
+
+.card {
+    background: #8D9B6A;
+    margin: none;
+    padding-bottom: 1em;
+    align-content: center;
+    text-align: center;
+    color:#fff;
+}
+
+#pfp {
+    clip-path: circle(175px at center);
+}
+
+.grid-container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    grid-template-areas: 
+    "recent recent item1 item2"
+    "recent recent item3 item4"
+}
+
+.grid-item {
+    padding: 1rem;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+.fab {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Add a hover effect if you want */
+  .fab:hover {
+    opacity: 0.7;
+  }
