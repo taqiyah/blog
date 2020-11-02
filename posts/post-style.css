@@ -1,0 +1,17 @@
+body {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    color: white;
+    background: #8D9B6A;
+    text-align: center;
+}
+
+.content {
+    padding-left: 2em;
+    padding-right: 2em;
+    border-style: solid;
+    border-color: #8D9B6A;
+    border-radius: 5px;
+}
