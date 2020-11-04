@@ -62,7 +62,7 @@ li {
     "recent recent item3 item4"
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -97,9 +97,8 @@ li {
     margin: 1em;
 }
 
-.grid-item:hover {
+.grid-item button:hover {
     cursor: pointer;
-
 }
 
 .date {
