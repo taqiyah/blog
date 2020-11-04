@@ -2,10 +2,56 @@ body {
     font-family: 'Merriweather', serif;
 }
 
-h1 {
-    color: white;
+
+.date {
+    font-size: 0.8em;
+    text-align: left;
+    color:  #8D9B6A;
+    font-weight: bold;
+}
+
+nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 1em;
     background: #8D9B6A;
+    height: 2em;
     text-align: center;
+    padding-top: 0.6em;
+}
+
+.nav-item {
+    list-style: none;
+    color: white;
+}
+
+.nav-item:hover {
+    opacity: 0.7;
+
+}
+
+ul {
+    align-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    padding: 1em;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 0;
+    text-decoration: underline;
+    line-height: 0.85em;
 }
 
 .content {
@@ -15,3 +61,4 @@ h1 {
     border-color: #8D9B6A;
     border-radius: 5px;
 }
+

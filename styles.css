@@ -12,11 +12,17 @@ nav {
     background: #8D9B6A;
     height: 2em;
     text-align: center;
+    padding-top: 0.6em;
 }
 
 .nav-item {
     list-style: none;
     color: white;
+}
+
+.nav-item:hover {
+    opacity: 0.7;
+
 }
 
 ul {
@@ -56,11 +62,52 @@ li {
     "recent recent item3 item4"
 }
 
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "recent"
+        "recent"
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+    }
+    #pfp {
+        clip-path: circle(10vh at center);
+        width: 50%;
+    }
+
+    p {
+        padding: 1em;
+
+    }
+
+    .footer a {
+        font-size: 35px;
+        padding: 10px;
+        margin: 10px 0px;
+    }
+}
+
 .grid-item {
-    padding: 1rem;
+    padding: 0.1em 1em;
     border-style: solid;
-    border-radius: 10px;
     margin: 1em;
+}
+
+.grid-item:hover {
+    cursor: pointer;
+
+}
+
+.date {
+    font-size: 0.8em;
+    text-align: left;
+    color:  #8D9B6A;
+    font-weight: bold;
+    line-height: 0.75em;
 }
 
 .fab {
@@ -76,3 +123,52 @@ li {
   .fab:hover {
     opacity: 0.7;
   }
+
+  button {
+    background-color: #8D9B6A;
+    border: solid #8D9B6A;
+    color: #fff;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+  }
+
+  button:hover{
+    background-color: #fff;
+    border: solid #8D9B6A;
+    color: #8D9B6A;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+  }
+
+  .post-container {
+    display: block;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+    border-style: solid;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+
+}
+
+.post-container h2 {
+    line-height: 0.35em;
+    padding-top: 0.5em;
+    
+}
+
+.post-container:hover {
+    cursor: pointer;
+
+}
+
+.footer {
+    text-align: center;
+}
