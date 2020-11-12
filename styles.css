@@ -1,5 +1,14 @@
 body {
     font-family: 'Merriweather', serif;
+    background: black;
+}
+
+h1 {
+    padding-top: 2em;
+    padding-bottom: 0.8em;
+    text-align: center;
+    color:white;
+    letter-spacing: 0.7em;
 }
 
 nav {
@@ -7,22 +16,21 @@ nav {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    background: #8D9B6A;
-    height: 2em;
     text-align: center;
-    padding-top: 0.6em;
+    padding: 0.6 2em;
+    padding-bottom: 0.5em;
+    border-bottom: solid rgba(255, 255, 255, 0.4) 1px;
 }
 
 .nav-item {
     list-style: none;
     color: white;
+    padding: 0 3vw;
+    text-decoration: none;
 }
 
 .nav-item:hover {
-    opacity: 0.7;
-
+    text-decoration: underline;
 }
 
 ul {
@@ -38,7 +46,7 @@ li {
 }
 
 .card {
-    background: #8D9B6A;
+    background: black;
     margin: none;
     padding-bottom: 1em;
     align-content: center;
@@ -46,20 +54,16 @@ li {
     color:#fff;
 }
 
-#pfp {
-    clip-path: circle(175px at center);
-}
-
 .grid-container {
     display: grid;
     text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     padding: 1rem 0;
     margin: 1rem 0;
     grid-template-areas: 
-    "recent recent item1 item2"
-    "recent recent item3 item4"
+    "photo photo photo about about"
+    "photo photo photo about about"
 }
 
 @media only screen and (max-width: 800px) {
@@ -67,21 +71,12 @@ li {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
-        "recent"
-        "recent"
-        "item1"
-        "item2"
-        "item3"
-        "item4"
-    }
-    #pfp {
-        clip-path: circle(10vh at center);
-        width: 50%;
+        "photo"
+        "about"
     }
 
     p {
         padding: 1em;
-
     }
 
     .footer a {
@@ -89,12 +84,29 @@ li {
         padding: 10px;
         margin: 10px 0px;
     }
+    .nav-item {
+        padding: 0 1vw;
+    }
+
+    h1 {
+        padding: 0.5em;
+    }
+
+    .content {
+        margin: 0em;
+    }
 }
 
 .grid-item {
     padding: 0.1em 1em;
-    border-style: solid;
     margin: 1em;
+    color: white
+}
+
+.grid-item img {
+    object-fit: cover;
+    max-width:100%;
+    max-height:100%;
 }
 
 .grid-item button:hover {
@@ -104,7 +116,7 @@ li {
 .date {
     font-size: 0.8em;
     text-align: left;
-    color:  #8D9B6A;
+    color:white;
     font-weight: bold;
     line-height: 0.75em;
 }
@@ -115,57 +127,91 @@ li {
     width: 50px;
     text-align: center;
     text-decoration: none;
+    color: white;
+}
+
+/* Add a hover effect if you want */
+.fab:hover {
+opacity: 0.7;
+}
+
+button {
+    background-color: white;
+    border: solid white;
     color: black;
-  }
-  
-  /* Add a hover effect if you want */
-  .fab:hover {
-    opacity: 0.7;
-  }
-
-  button {
-    background-color: #8D9B6A;
-    border: solid #8D9B6A;
-    color: #fff;
     padding: 4px 8px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
     font-family: 'Merriweather', serif;
-  }
+}
 
-  button:hover{
-    background-color: #fff;
-    border: solid #8D9B6A;
-    color: #8D9B6A;
+button:hover{
+    background-color: black;
+    border: solid black;
+    color: white;
     padding: 4px 8px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
     font-family: 'Merriweather', serif;
-  }
+}
 
-  .post-container {
+.post-container {
     display: block;
     padding: 1rem 1rem;
-    margin: 1rem 0;
-    border-style: solid;
+    margin: 1rem 1em;
+    border: solid white 0.1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
-
+    color: white;
 }
 
 .post-container h2 {
     line-height: 0.35em;
     padding-top: 0.5em;
-    
 }
 
 .post-container:hover {
     cursor: pointer;
+    border-right: solid white 1em; 
+}
 
+/* for the photos section */
+.img-container {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0.75em;
+    background: black;
+}
+
+.photo {
+    /* padding: 0.25em 0.25em; */
+    display: block;
+}
+
+.photo > img {
+    margin: 0.25em 0em;
+    width: 100%;
+    /* object-fit: cover;
+    max-height: auto;
+    height: auto; */
+}
+
+.content {
+    color:white;
+    margin: 1em 3em;
+}
+
+.content h1 {
+    letter-spacing: normal;
 }
 
 .footer {
