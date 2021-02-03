@@ -95,6 +95,10 @@ li {
     .content {
         margin: 0em;
     }
+    
+    .collapsible i {
+        display: none;
+    }
 }
 
 .grid-item {
@@ -216,4 +220,89 @@ button:hover{
 
 .footer {
     text-align: center;
+}
+
+/*post2 tea styles*/ 
+
+.herbal {
+    display: block;
+    padding: 0.25em; 
+    background-image: linear-gradient(to right, white 1%, black 1%);
+    
+}
+
+.white {
+    display: block;
+    padding: 0.25em; 
+    background-image: linear-gradient(to right, white 8%, black 8%);
+}
+
+.oolong {
+    display: block;
+    padding: 0.25em; 
+    background-image: linear-gradient(to right, white 25%, black 25%);
+}
+
+.green {
+    display: block;
+    padding: 0.25em; 
+    background-image: linear-gradient(to right, white 50%, black 50%);
+}
+
+.black {
+    display: block;
+    padding: 0.25em; 
+    background-image: linear-gradient(to right, white 75%, black 75%);
+}
+
+.puerh {
+    display: block;
+    padding: 0.25em; 
+    background-image: linear-gradient(to right, white 90%, black 90%);
+}
+
+/* styles for collapsible sections */
+.collapsible {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 45%;
+    text-align: center;
+    border: none;
+    text-align: left;
+    outline: none;
+    margin: auto;
+    font-size: 15px;
+}
+
+.collapsible:hover {
+    font-style: italic;
+}
+  
+/* .active, .collapsible:hover {
+    background-color: white;
+    color: black;
+} */
+
+
+.song {
+    width: 40%;
+    margin: auto;
+    padding: 0 20;
+    max-height: 0;
+    overflow: hidden;
+    /* transition: max-height 0.2s ease-out; */
+    background-color: black;
+    border-left: 2px solid white;
+    color: white;
+}
+
+.fun-link {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+.fun-link:hover {
+    text-decoration: underline;
+    font-style: italic;
 }
